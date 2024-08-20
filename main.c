@@ -6,11 +6,16 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 11:28:16 by badriano          #+#    #+#             */
-/*   Updated: 2024/08/20 06:04:05 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/20 06:36:40 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/so_long.h"
+int ft_close_game(t_game *game)
+{
+	close_game(game);
+	return(0);
+}
 
 void	start_game(t_game *game, int *size)
 {
@@ -27,6 +32,7 @@ void	start_game(t_game *game, int *size)
 	store_to_struct(game);
 	mlx_loop_hook(game->init, render_loop, game);
 	mlx_hook(game->window, 2, 1L << 0, move_player, game);
+	mlx_hook(game->window, 17, 0L, ft_close_game, game);
 	mlx_loop(game->init);
 }
 
