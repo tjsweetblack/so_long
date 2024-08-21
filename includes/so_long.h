@@ -39,7 +39,7 @@ typedef struct t_game
 	void	*window;
 	char	**map;
 	int		move_count;
-	int		current_frame;// Add this to track the animation frame
+	int		current_frame;
 	int		frame_count;
 	t_image	image;
 }			t_game;

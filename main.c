@@ -11,10 +11,11 @@
 /* ************************************************************************** */
 
 #include "./includes/so_long.h"
-int ft_close_game(t_game *game)
+
+int	ft_close_game(t_game *game)
 {
 	close_game(game);
-	return(0);
+	return (0);
 }
 
 void	start_game(t_game *game, int *size)
