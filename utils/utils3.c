@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 11:19:05 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/19 11:24:01 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/21 11:31:22 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,24 @@ void	*ft_memcpy(void *dst, void *src, size_t n)
 		i++;
 	}
 	return (dst);
+}
+
+char	**copy_map(char **original_map)
+{
+	int		i;
+	int		height;
+	char	**copy;
+
+	i = 0;
+	height = 0;
+	while (original_map[height])
+		height++;
+	copy = (char **)malloc((height + 1) * sizeof(char *));
+	while (i < height)
+	{
+		copy[i] = ft_strdup(original_map[i]);
+		i++;
+	}
+	copy[height] = NULL;
+	return (copy);
 }

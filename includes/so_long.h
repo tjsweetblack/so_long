@@ -58,7 +58,7 @@ int		render_map(t_game *game);
 int		render_loop(t_game *game);
 void	store_to_struct(t_game *game);
 void	free_map(char **map);
-//--------------ERROS-------------------------------
+//--------------ERROS----------------------------
 int		ft_equal_lines(char **map, int *size, int y_count, int x_count);
 int		ft_first_and_last(char **map, int *size, int y_count);
 int		ft_first_and_last_line(char **map, int x_count);
@@ -69,7 +69,7 @@ int		ft_is_rectangle(char **map, int *size);
 int		charector_count_c(char **map, int y_count, int x_count);
 int		charector_count_e(char **map, int y_count, int x_count);
 int		charector_count_p(char **map, int y_count, int x_count);
-//-------------events-------------------------
+//-------------events----------------------------
 int		move_player(int key_sym, void *param);
 void	close_game(t_game *game);
 int		end_of_game(t_game *game, int x, int y);
@@ -78,6 +78,7 @@ int		is_map_playable(char **map);
 int		num_sub_str(char const *s, char c);
 size_t	ft_strlen(char *s);
 char	*ft_copy_str(char *s1, char *s2, char *result);
+char	**copy_map(char **original_map);
 char	*ft_strjoin(char *s1, char *s2);
 size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
 char	**ft_split(char *s, char c);
@@ -91,7 +92,7 @@ void	move_right(t_game *game, int y, int x);
 void	move_left(t_game *game, int y, int x);
 void	move_down(t_game *game, int y, int x);
 void	move_up(t_game *game, int y, int x);
-//-------------------ft_printf------------------------
+//-------------------ft_printf--------------------
 int		ft_putchar_len(char c, int current_len);
 int		ft_print_num(int num, int current_len);
 int		num_len(int num, int current_len);
