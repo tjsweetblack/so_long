@@ -48,11 +48,11 @@ The game maps are defined in .ber files. The map should follow these rules:
 
 Example map:
 
-1111111111111
-1C1100E0000C1
-1000011111001
-1P00110000001
-1111111111111
+    1111111111111
+    1C1100E0000C1
+    1000011111001
+    1P00110000001
+    1111111111111
 
 How It Works
 Game Logic
