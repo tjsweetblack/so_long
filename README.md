@@ -21,7 +21,7 @@ Installation
 
     bash
 
-git clone https://github.com/yourusername/so_long.git
+git clone https://github.com/tjsweetblack/so_long.git
 cd so_long
 
 Build the project:
